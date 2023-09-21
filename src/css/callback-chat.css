@@ -1,0 +1,167 @@
+.action-circle {
+    position: absolute;
+    bottom: 5%;
+    right: 2%;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform .3s linear;
+}
+
+.action-circle:hover {
+    transform: scale(1.2);
+}
+
+.chat-container {
+    width: 250px;
+    height: 250px;
+    display: none;
+    opacity: 0;
+    flex-direction: column;
+    gap: .5rem;
+    padding: 1rem;
+    box-shadow: var(--box-shadow);
+    position: absolute;
+    bottom: 5%;
+    right: 2%;
+}
+
+.active-chat {
+    display: flex;
+    opacity: 1;
+    animation: active-el .5s linear;
+}
+
+.disabled-chat {
+    display: none;
+    opacity: 0;
+    animation: disable-el .3s linear;
+}
+
+.active-circle {
+    display: block;
+    opacity: 1;
+    animation: active-circle-el .5s linear;
+}
+
+.disabled-circle {
+    display: none;
+    opacity: 0;
+    animation: disable-el .3s linear;
+}
+
+.chat-remover {
+    align-self: flex-end;
+    cursor: pointer;
+    transition: transform .3;
+}
+
+.chat-remover:active {
+    transform: scale(.8);
+}
+
+.chat-title {
+    font-size: 1.3rem;
+}
+
+.chat-textarea {
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 50%;
+    max-height: 100%;
+    padding: 10px;
+    box-shadow: var(--box-shadow);
+    border: 1px solid rgb(222, 215, 215);
+}
+
+.chat-textarea:focus {
+    outline: 1px solid rgb(175, 172, 172);
+}
+
+.chat-textarea::-webkit-scrollbar {
+    display: none;
+}
+
+.send-btn {
+    background-color: var(--btn-color);
+    border-radius: 10px;
+    padding: 5px;
+    color: #FFFFFF;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    transition: background-color 0.3s;
+}
+
+.send-btn:active {
+    outline: var(--btn-active-outline);
+}
+
+.send-btn:hover {
+    background-color: var( --btn-onhover-color);
+}
+
+.chat-remover {
+    color: rgb(55, 55, 55);
+    transition: color .3s, transform .3s;
+}
+.chat-remover:hover {
+    transform: scale(1.5);
+    color: black;
+}
+
+
+@keyframes active-el {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+    
+      1% {
+        display: flex;
+        opacity: 0;
+    }
+    
+      100% {
+        display: flex;
+        opacity: 1;
+    }
+}
+
+@keyframes disable-el {
+    0% {
+        opacity: 1;
+        display: flex;
+    }
+    
+      1% {
+        opacity: 1;
+    }
+    
+      100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+@keyframes active-circle-el {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+    
+      1% {
+        opacity: 0;
+    }
+
+      49% {
+        display: block;
+        opacity: .5;
+      }
+    
+      100% {
+        display: block;
+        opacity: 1;
+    }
+}

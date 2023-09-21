@@ -1,0 +1,151 @@
+.liker-container {
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.liker-btn {
+    background-color: var(--btn-color);
+    width: 70px;
+    height: 30px;
+    border-radius: 10px;
+    padding: 5px;
+    color: #FFFFFF;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    transition: background-color 0.3s;
+}
+.liker-btn:active {
+    outline: var(--btn-active-outline);
+}
+.liker-btn:hover {
+    background-color: var( --btn-onhover-color);
+}
+
+.heart {
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.float-left {
+    animation: floating-heart-left 1.3s 1 cubic-bezier(.42,.08,.96,.42);
+}
+.float-right {
+    animation: floating-heart-right 1.3s 1 cubic-bezier(.42,.08,.96,.42);
+}
+.float-center {
+    animation: floating-heart-center 1.3s 1 cubic-bezier(.42,.08,.96,.42);
+}
+
+@keyframes floating-heart-left {
+    0% {
+      opacity: 0;
+      bottom: 0;
+      left: 50%;
+    }
+    10% {
+      opacity: 1;
+      bottom: 100%;
+      left: 0;
+    }
+    20% {
+      bottom: 200%;
+      left: 50%;
+    }
+    30% {
+      bottom: 400%;
+      left: 10%;
+    }
+    40% {
+      opacity: 1;
+      bottom: 600%;
+      left: 50%;
+    }
+    48% {
+      opacity: 0;
+      bottom: 800%;
+      left: 20%;
+    }
+    100% {
+      opacity: 0;
+      bottom: 850%;
+      left: 50%;
+    }
+}
+
+  @keyframes floating-heart-right {
+    0% {
+        opacity: 0;
+        bottom: 0;
+        left: 50%;
+      }
+      10% {
+        opacity: 1;
+        bottom: 100%;
+        left: 100%;
+      }
+      20% {
+        bottom: 200%;
+        left: 50%;
+      }
+      30% {
+        bottom: 400%;
+        left: 90%;
+      }
+      40% {
+        opacity: 1;
+        bottom: 600%;
+        left: 60%;
+      }
+      48% {
+        opacity: 0;
+        bottom: 800%;
+        left: 80%;
+      }
+      100% {
+        opacity: 0;
+        bottom: 850%;
+        left: 70%;
+      }
+}
+
+@keyframes floating-heart-center {
+    0% {
+      opacity: 0;
+      bottom: 0;
+      left: 50%;
+    }
+    10% {
+      opacity: 1;
+      bottom: 100%;
+      left: 70%;
+    }
+    20% {
+      bottom: 200%;
+      left: 30%;
+    }
+    30% {
+      bottom: 400%;
+      left: 60%;
+    }
+    40% {
+      opacity: 1;
+      bottom: 600%;
+      left: 40%;
+    }
+    48% {
+      opacity: 0;
+      bottom: 800%;
+      left: 50%;
+    }
+    100% {
+      opacity: 0;
+      bottom: 850%;
+      left: 60%;
+    }
+}
